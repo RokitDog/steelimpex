@@ -19,8 +19,15 @@
 .primary-button {
     a {
         padding: 14px 30px;
-        background: $white;
+        background-color: $white;
         color: $primary !important;
         border-radius: 45px;
+        transition: color $dur ease, background-color $dur ease;
+
+        &:hover {
+            color: $white !important;
+            background-color: $blue;
+
+        }
     }
 }
