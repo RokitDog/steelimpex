@@ -1,0 +1,21 @@
+.half-image-section {
+    max-width:  1460px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 140px 0;
+
+    .half-image-seciont-content {
+        max-width: 750px;
+    }
+
+    .head-title {
+        margin-bottom: 20px;
+    }
+
+    .head-content {
+        max-width: 630px;
+        margin-bottom: 60px;
+    }
+}

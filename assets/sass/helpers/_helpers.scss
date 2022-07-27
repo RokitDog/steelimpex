@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+## Helpers
+--------------------------------------------------------------*/
+.centered {
+	text-align: center;
+}
+
+//Text meant only for screen readers.
+.sr-only {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+	&:focus {
+		border-radius: 3px;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		display: block;
+		font-weight: bold;
+		height: auto;
+		left: 5px;
+		line-height: normal;
+		padding: 15px 23px 14px;
+		text-decoration: none;
+		top: 5px;
+		width: auto;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+.text-clip {
+	background: linear-gradient(98.12deg, #0194da -2.07%, #12195d  66.16%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.text-clip-alt {
+	background: linear-gradient(98.12deg, #12195D -2.07%, #0194DA 66.16%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+.head-link {
+
+	a {
+		color: $dark-blue;
+		font-size: 18px;
+		font-weight: 600;
+		transition: color $dur ease;
+
+		&:hover {
+			color: $blue;
+
+			li {
+				margin-left: 10px;
+			}
+		}
+		li {
+			font-size: 12px;
+			color: $blue;
+			margin-left: 5px;
+			transition: margin-left $dur ease;
+		}
+	}
+
+}

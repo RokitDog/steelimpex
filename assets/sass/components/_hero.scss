@@ -1,0 +1,111 @@
+.hero-section {
+    background: url('./assets/images/hero-home.jpg');
+    padding-top: 320px;
+    padding-bottom: 150px;
+    border-radius: 0 0 40px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section-title {
+    max-width: 693px;
+    color: $white;
+    margin-bottom: 40px;
+}
+
+.hero-section-video {
+    display: flex;
+    align-items: center;
+    color: $white;
+    grid-gap: 15px;
+    margin-bottom: 150px;
+    max-width: fit-content;
+
+    p {
+        color: $white;
+    }
+
+    .another-circle {
+        stroke-dasharray: 115;
+        stroke-dashoffset: 115px;
+        transition: stroke-dashoffset 1000ms ease;
+        transform-origin: center center;
+        transform: rotate(-90deg);
+      }
+
+    &:hover {
+        .another-circle {
+            stroke-dashoffset: 0;
+        }
+    }
+
+}
+
+.hero-section-linkbox {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    max-width: fit-content;
+    padding: 25px 20px;
+    border-radius: 10px;
+    grid-gap: 50px;
+
+    .hero-section-linkbox-title {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        color: $white;
+        line-height: 1.187;
+    }
+
+    .hero-section-linkbox-desc {
+        color: $white;
+    }
+
+    svg {
+        display: inline-block;
+    }
+
+    .another-circle {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100px;
+        transition: stroke-dashoffset 1000ms ease;
+        transform-origin: 0 0 0;
+      }
+
+    &:hover {
+        .another-circle {
+            stroke-dashoffset: 0;
+                transform: translate(5, 14);
+        }
+    }
+    
+}
+
+.socials {
+    position: absolute;
+    right: 130px;
+    bottom: 120px;
+
+
+    ul {
+        display: flex;
+        grid-gap: 40px;
+
+        a:hover {
+            li {
+                opacity: 0.8;
+            }
+        }
+
+        li {
+            color: $white;
+            font-size: 20px;
+            transition: opacity $dur ease;
+        }
+    }
+}

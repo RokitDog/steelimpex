@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    transition: $dur $ease;
+    font-size: 12px;
+    text-align: center;
+    font-family: $font-main;
+    border: none;
+    outline: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.primary-button {
+    a {
+        padding: 14px 30px;
+        background: $white;
+        color: $primary !important;
+        border-radius: 45px;
+    }
+}

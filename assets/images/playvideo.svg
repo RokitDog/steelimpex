@@ -1,0 +1,9 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="19" cy="19" r="18" fill="transparent" stroke="white" stroke-width="1"/>
+<circle class="another-circle" cx="19" cy="19" r="18" fill="transparent" stroke="url(#paint0_linear_244_7)" stroke-width="2.5"/>
+<path class="hero-play" d="M15 12L26 19L15 26V12Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <linearGradient id="paint0_linear_244_7" x1="28" y1="1" x2="28" y2="19" gradientUnits="userSpaceOnUse">
+  <stop stop-color="white"/>
+  <stop offset="1" stop-color="#0194DA"/>
+  </linearGradient>
+</svg>

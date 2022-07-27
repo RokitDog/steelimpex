@@ -1,0 +1,98 @@
+.materials-section {
+    background-color: $light-grey;
+
+    .tabs-container {
+        display: flex;
+
+        .tabs-container-left {
+            flex: 0 1 50%;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .head-pretitle {
+                width: 80%;
+                margin: 0 auto 50px;
+            }
+
+            .tabs-container-left-item {
+                border-top: 1px solid $grey;
+                width: 80%;
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0 30px;
+                opacity: 0.4;
+                margin: 0 auto;
+                transition: opacity $dur ease;
+
+                .tabs-container-left-item-title {
+                    flex: 0 0 30%;
+
+                    h4 {
+                        color: $dark-blue;
+                        transition: color $dur ease;
+                        font-weight: 600;
+                    }
+                }
+
+                .tabs-container-left-item-paragraph {
+                    color: $grey;
+                    max-width: 384px;
+                    flex: 0 1 60%;
+                    
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                svg {
+                    flex-shrink: 0;
+                }
+
+                .another-circle {
+                    stroke-dasharray: 100;
+                    stroke-dashoffset: 100px;
+                    transition: stroke-dashoffset 1000ms ease;
+                    transform-origin: 0 0 0;
+                  }
+
+                
+                  
+                &:hover {
+                    opacity: 1;
+
+                    
+                .tabs-container-left-item-title {
+
+                    h4 {
+                        color: $blue;
+                    }
+                }
+                    
+                    .another-circle {
+                        stroke-dashoffset: 0;
+                            transform: translate(5, 14);
+                    }
+                }
+            }
+        }
+
+        .tabs-container-right {
+            flex: 0 1 50%;
+
+            div {
+                border-top-left-radius: 40px;
+                border-bottom-left-radius: 40px;
+                width: 100%;
+                height: 100%;
+                background-image: url('./assets/images/metal.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                transition: background-image $dur ease;
+            }
+        }
+    }
+}
