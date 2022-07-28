@@ -26,7 +26,7 @@
 	
 	<!-- header -->
 	<header class="header js-header">
-		<div class="wrapper">
+		<div class="section-wrapper">
 			<div class="header-btn">
 				<a href="javascript:;" class="menu-btn js-menu-btn"><span></span></a>
 			</div>

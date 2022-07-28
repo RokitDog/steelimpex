@@ -1,37 +1,65 @@
 .location-section {
-    height: 760px;
+    height: 600px;
     background-image: url('assets/images/sremska-kamenica.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include mq($phone) {
+        height: 300px;
+    }
+
+}
+
+.location-section-buttons {
+    background: linear-gradient(0deg, #f4f6fa, #f4f6fa);
     padding-top: 80px;
 
-    .location-section-buttons {
+
+    @include mq($phone) {
+        padding-top: 40px;
+    }
+
+    >div {
+        justify-content: space-between;
+        display: flex;
         max-width: 718px;
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
 
-        button {
-            padding: 14px 30px;
-            background-color: $white;
-            color: $primary;
-            border: none;
-            border-radius: 45px;
-            font-size: 18px;
-            letter-spacing: 0.03em;
-            font-weight: 600;
-            transition: background-color $dur ease, color $dur ease;
+        @include mq($phone) {
+            max-width: 100%;
+            flex-direction: column;
+            grid-gap: 10px;
+            align-items: center;
+        }
+    }
+    
+    button {
+        padding: 14px 0;
+        background-color: $white;
+        color: $primary;
+        width: 226px;
+        border: none;
+        border-radius: 45px;
+        font-size: unquote('clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem)');
+        letter-spacing: 0.03em;
+        font-weight: 600;
+        transition: background-color $dur ease, color $dur ease;
+        outline: none;
 
-            &:hover {
-                background-color: $blue;
-                color: $white;
-            }
+        @include mq($phone) {
+            width: 180px;
+            padding: 10px 0;
+        }
 
-            &:active {
-                background-color: $blue;
-                color: $white;
-            }
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+
+        &:focus {
+            background-color: $blue;
+            color: $white;
         }
     }
 }

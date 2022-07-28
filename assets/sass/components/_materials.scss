@@ -12,9 +12,24 @@
             justify-content: center;
             align-items: center;
 
+            @include mq($tablet) {
+                flex: 0 1 100%;
+                padding: 100px 20px;
+
+            }
+
+            @include mq($phone) {
+                padding: 40px 20px;
+
+            }
+
             .head-pretitle {
                 width: 80%;
                 margin: 0 auto 50px;
+
+                @include mq($tablet) {
+                    width: 100%;
+                }
             }
 
             .tabs-container-left-item {
@@ -26,6 +41,15 @@
                 opacity: 0.4;
                 margin: 0 auto;
                 transition: opacity $dur ease;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+
+                @include mq($tablet) {
+                    width: 100%;
+                    opacity: 1;
+                }
 
                 .tabs-container-left-item-title {
                     flex: 0 0 30%;
@@ -43,7 +67,7 @@
                     flex: 0 1 60%;
                     
                     p {
-                        font-size: 18px;
+                        font-size: unquote('clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem)');
                     }
                 }
 
@@ -81,6 +105,10 @@
 
         .tabs-container-right {
             flex: 0 1 50%;
+
+            @include mq($tablet) {
+                display: none;
+            }
 
             div {
                 border-top-left-radius: 40px;

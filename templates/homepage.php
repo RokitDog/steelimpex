@@ -15,7 +15,7 @@ get_header(); ?>
 				<div class="section-wrapper">
 					<div class="hero-section-title">
 						<h1>
-							Steel Impex je lider reciklaže u Srbiji.
+							Steel Impex je lider<br /> reciklaže u Srbiji.
 						</h1>
 					</div>
 					<a href="#" class="hero-section-video">
@@ -59,7 +59,7 @@ get_header(); ?>
 				<div class="section-wrapper">
 					<h2 class="text-clip">
 						Mi smatramo... <br />
-						<span class="fading-text text-clip">da je reciklaža neophodan korak ka očuvanju planete</span>
+						<span class="fading-text text-clip"></span>
 					</h2>
 				</div>
 			</div>
@@ -168,13 +168,13 @@ get_header(); ?>
 
 			<div class="cards-section">
 				<div class="section-wrapper">
+					<div class="head-pretitle">
+						<span>
+							Proizvodi
+						</span>
+					</div>
 					<div class="cards-section-content">
 						<div class="cards-section-content-left">
-							<div class="head-pretitle">
-								<span>
-									Proizvodi
-								</span>
-							</div>
 							<div class="head-title">
 								<h2 class="text-clip-alt">
 									Nakon reciklaže nastaju novi proizvodi spremni za upotrebu.
@@ -189,7 +189,7 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<div class="cards-section-cards">
+					<div class="cards-section-cards js-slider">
 						<div class="cards-section-cards-item">
 							<div class="cards-section-cards-item-title">
 								<h3>

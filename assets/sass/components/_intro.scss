@@ -3,7 +3,21 @@
     margin: 0 auto;
 
     h2 {
-        padding: 292px 0 432px;
+        padding: 300px 0;
+
+        @include mq($tablet) {
+            padding: 200px 0;
+        }
+        @include mq(800) {
+            min-height: 110px;
+        }
+        @include mq($phone) {
+            padding: 120px 0;
+        }
+        @include mq($phone-sm) {
+            min-height: 120px;
+        }
+
     }
 
 }

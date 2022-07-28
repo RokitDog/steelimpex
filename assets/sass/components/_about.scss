@@ -3,17 +3,41 @@
     padding-top: 80px;
     position: relative;
 
+    @include mq($phone) {
+        padding-top: 40px;
+    }
+
 
     .about-section-numbers {
         display: flex;
         justify-content: space-between;
 
+        @include mq($tablet) {
+            justify-content: initial;
+            flex-wrap: wrap;
+            grid-gap: 30px;
+        }
+        @include mq($tablet) {
+            justify-content: initial;
+            flex-wrap: wrap;
+            grid-gap: 15px;
+        }
+
         .about-section-numbers-item {
             flex: 0 0 20%;
             max-width: 216px;
 
+            @include mq($tablet) {
+                flex: 0 1 30%;
+                max-width: 30%;
+            }
+            @include mq($tablet) {
+                flex: 0 1 45%;
+                max-width: 45%;
+            }
+
             .about-section-numbers-item-number {
-                font-size: 86px;
+                font-size: unquote('clamp(3.5rem, 3.125rem + 1.875vw, 5.375rem)');
                 font-weight: 500;
                 line-height: 1.17;
                 letter-spacing: 0.03em;
@@ -32,13 +56,23 @@
         background-repeat: no-repeat;
         position: relative;
 
+        @include mq($phone) {
+            margin-top: 40px;
+            padding: 40px 20px;
+            border-radius: 20px;
+        }
+
         .head-title {
             max-width: 693px;
             color: $white;
             margin-bottom: 20px;
 
+            @include mq($phone) {
+                margin-bottom: 10px;
+            }
+
             h2 {
-                font-size: 62px;
+                font-size: unquote('clamp(1.875rem, 1.475rem + 2vw, 3.875rem)');
                 line-height: 1.13;
             }
         }

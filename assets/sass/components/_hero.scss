@@ -6,12 +6,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    @include mq($tablet) {
+        padding-bottom: 100px;
+    }
+
+    @include mq($phone) {
+        padding-top: 180px;
+        padding-bottom: 40px;
+        border-radius: 0 0 20px 20px;
+    }
 }
 
 .hero-section-title {
     max-width: 693px;
     color: $white;
     margin-bottom: 40px;
+
+    @include mq($phone) {
+        margin-bottom: 25px;
+    }
 }
 
 .hero-section-video {
@@ -21,6 +35,10 @@
     grid-gap: 15px;
     margin-bottom: 150px;
     max-width: fit-content;
+
+    @include mq($phone) {
+        margin-bottom: 135px;
+    }
 
     p {
         color: $white;
@@ -53,7 +71,7 @@
     grid-gap: 50px;
 
     .hero-section-linkbox-title {
-        font-size: 16px;
+        font-size: unquote('clamp(0.75rem, 0.7rem + 0.25vw, 1rem)');
         font-weight: 700;
         letter-spacing: 0.03em;
         margin-bottom: 10px;
@@ -88,9 +106,12 @@
 
 .socials {
     position: absolute;
-    right: 130px;
+    right: 10vw;
     bottom: 120px;
 
+    @include mq($phone) {
+        display: none;
+    }
 
     ul {
         display: flex;
@@ -98,7 +119,7 @@
 
         a:hover {
             li {
-                opacity: 0.8;
+                opacity: 0.6;
             }
         }
 

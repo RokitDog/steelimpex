@@ -4,7 +4,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 140px 0;
+    padding: 140px 20px;
+    grid-gap: 60px;
+
+    @include mq($tablet) {
+        padding: 100px 20px;
+    }
+
+    @include mq($phone) {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .half-image-section-image {
+        @include mq($phone) {
+            max-width: 80%;
+        }
+        @include mq($phone-sm) {
+            max-width: 100%;
+        }
+    }
 
     .half-image-seciont-content {
         max-width: 750px;
@@ -12,10 +31,18 @@
 
     .head-title {
         margin-bottom: 20px;
+
+        @include mq($phone) {
+            margin-bottom: 15px;
+        }
     }
 
     .head-content {
         max-width: 630px;
         margin-bottom: 60px;
+
+        @include mq($phone) {
+            margin-bottom: 40px;
+        }
     }
 }

@@ -21,8 +21,15 @@
         padding: 14px 30px;
         background-color: $white;
         color: $primary !important;
+        font-size: unquote('clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem)') !important;
+        font-weight: 600;
+        display: inline-block;
         border-radius: 45px;
         transition: color $dur ease, background-color $dur ease;
+
+        @include mq($phone) {
+            padding: 10px 20px;
+        }
 
         &:hover {
             color: $white !important;

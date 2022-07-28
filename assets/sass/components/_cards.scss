@@ -1,18 +1,50 @@
 .cards-section {
-    padding: 100px 0 140px;
+    padding: 100px 0;
+
+    @include mq($phone) {
+        padding: 40px 0;
+    }
+
+    .section-wrapper {
+        @include mq($phone) {
+            padding: 0;
+        }
+
+        .head-pretitle {
+            @include mq($phone) {
+                padding: 0 20px;
+            }
+        }
+    }
     
     .cards-section-content {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
         margin-bottom: 80px;
+        grid-gap: 15px;
+
+        @include mq($phone) {
+            display: grid;
+            margin-bottom: 40px;
+        }
 
         .cards-section-content-left {
             max-width: 700px;
+
+            @include mq($phone) {
+                padding: 0 20px;
+            }
         }
 
         .cards-section-content-right {
             max-width: 650px;
+            flex-shrink: 1;
+
+            @include mq($phone) {
+                padding: 0 20px;
+            }
+
         }
     }
 
@@ -21,10 +53,20 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 60px;
 
+        @include mq($phone) {
+            grid-template-columns: 1fr;
+            grid-gap: 0;
+        }
+
         .cards-section-cards-item {
             background-color: $light-grey;
             padding: 60px 40px;
             border-radius: 20px;
+
+            @include mq($phone) {
+                padding: 30px 20px;
+                margin-left: 20px;
+            }
 
             .cards-section-cards-item-title {
                 margin-bottom: 20px;
@@ -36,7 +78,7 @@
             
             .cards-section-cards-item-description {
                 max-width: 384px;
-                margin-bottom: 374px;
+                margin-bottom: 80px;
             }
         }
 
