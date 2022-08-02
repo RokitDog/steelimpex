@@ -78,3 +78,19 @@
 	background-color: $blue;
 	color: $white;
 }
+
+.row-reverse {
+	flex-direction: row-reverse;
+
+	.half-image-section-image {
+		flex: 0 1 40%;
+	}
+
+	.half-image-section-content {
+		flex: 0 1 60%;
+	}
+
+	.head-content {
+		max-width: 100% !important;
+	}
+}

@@ -9,3 +9,23 @@ html, body {
 html {
 	box-sizing: border-box;
 }
+
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: $light-grey;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: $blue;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+  }

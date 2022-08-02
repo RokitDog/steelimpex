@@ -15,98 +15,53 @@
 	<div class="about-section">
 		<div class="section-wrapper">
 			<div class="about-section-numbers">
-				<div class="about-section-numbers-item">
-					<div class="about-section-numbers-item-number">
-						<span>34x</span>
-					</div>
-					<div class="about-section-numbers-item-description">
-						<p class="description">
-							Enim pulvinar arcu gravida orci, sit tempus maecenas quis.
-						</p>
-					</div>
-				</div>
-				<div class="about-section-numbers-item">
-					<div class="about-section-numbers-item-number">
-						<span>87.4%</span>
-					</div>
-					<div class="about-section-numbers-item-description">
-						<p class="description">
-							Massa quam amet rhoncus, quam sit dui et porttitor ut.
-						</p>
-					</div>
-				</div>
-				<div class="about-section-numbers-item">
-					<div class="about-section-numbers-item-number">
-						<span>780+</span>
-					</div>
-					<div class="about-section-numbers-item-description">
-						<p class="description">
-							Libero aenean platea eu aliquam.
-						</p>
-					</div>
-				</div>
-				<div class="about-section-numbers-item">
-					<div class="about-section-numbers-item-number">
-						<span>0%</span>
-					</div>
-					<div class="about-section-numbers-item-description">
-						<p class="description">
-							Massa quam amet rhoncus, quam sit dui et porttitor ut.
-						</p>
-					</div>
-				</div>
-				<div class="about-section-numbers-item">
-					<div class="about-section-numbers-item-number">
-						<span>42</span>
-					</div>
-					<div class="about-section-numbers-item-description">
-						<p class="description">
-							Libero aenean platea eu aliquam.
-						</p>
-					</div>
-				</div>
+				<?php if ( have_rows('about_numbers', 'option') ) : ?>
+					<?php while ( have_rows('about_numbers', 'option') ) : the_row(); ?>
+						<div class="about-section-numbers-item">
+							<div class="about-section-numbers-item-number">
+								<span><?php echo get_sub_field('number'); ?>
+									<span class="unit"><?php echo get_sub_field('unit'); ?></span>
+								</span>
+
+							</div>
+							<div class="about-section-numbers-item-description">
+								<p class="description">
+									<?php echo get_sub_field('description'); ?>
+								</p>
+							</div>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
-			<div class="about-section-banner">
+			<div class="about-section-banner" style="background-image: url('<?php echo get_field('about_bg_image', 'option'); ?>')">
 				<div class="head-pretitle">
 					<span>
-						O nama
+						<?php echo get_field('about_pretitle', 'option'); ?>
 					</span>
 				</div>
 				<div class="head-title">
 					<h2>
-						Svaki reciklirani komad otpada se računa.
+						<?php echo get_field('about_title', 'option'); ?>
 					</h2>
 				</div>
 				<div class="head-content">
 					<div class="entry-content">
 						<p>
-							Reciklaža nam omogućava da istovremeno sprečavamo zagađenje, čuvamo prirodne resurse i pospešujemo cirkularnu ekonomiju.
+							<?php echo get_field('about_paragraph', 'option'); ?>
 						</p>
 					</div>
 				</div>
 				<div class="about-section-banner-button primary-button">
-					<a href="#">
+					<a href="<?php echo get_field('about_link', 'option'); ?>">
 						Kontaktiraj nas
 					</a>
 			</div>
 			</div>
 		</div>
 	</div>
-	<div class="location-section-buttons">
-		<div>
-			<button autofocus>
-					Sremska Kamenica
-				</button>
-				<button>
-					Petrovaradin
-				</button>
-				<button>
-					Kraljevo
-				</button>
-		</div>
-	</div>
-	<div class="location-section">
-	</div>
+
+	<?php get_template_part( 'template-parts/modules/module', 'map' ); ?>
+
 	<footer class="footer">
 		<div class="section-wrapper">
 			<div class="footer-container">
@@ -115,9 +70,64 @@
 						<?php echo file_get_contents("./wp-content/themes/steelimpex/assets/images/logo-footer.svg"); ?>
 					</a>
 					<h3>
-						Sit in adipiscing dictumst nunc. Suspendisse porta quam molestie nunc ipsum.
+						<?php echo get_field('footer_paragraph', 'option'); ?>
 					</h3>
-					<div class="footer-col-1-socials">
+					<h3>
+						<?php echo get_field('footer_paragraph_2', 'option'); ?>
+					</h3>
+				</div>
+					<div class="footer-col-2">
+						<div class="head-pretitle">
+							<span>
+								<?php echo get_field('footer_column_1_pretitle', 'option'); ?>
+							</span>
+						</div>
+						<nav class="footer-col-2-nav">
+							<?php if ( have_rows('footer_navigation', 'option') ) : ?>
+								<?php while ( have_rows('footer_navigation', 'option') ) : the_row(); ?>
+										<li>
+											<a href="<?php echo get_sub_field('footer_nav_link'); ?>"><?php echo get_sub_field('footer_nav_label'); ?></a>
+										</li>
+								<?php endwhile; ?>
+							<?php endif; ?>
+						</nav>
+					</div>
+					<div class="footer-col-3">
+						<div class="head-pretitle">
+							<span>	
+								<?php echo get_field('footer_column_2_pretitle', 'option'); ?>
+							</span>
+						</div>
+						<div class="footer-col-3-address">
+							<p><?php echo get_field('address_1', 'option'); ?></p>
+						</div>
+						<div class="footer-col-3-address">
+							<p><?php echo get_field('address_2', 'option'); ?></p>
+						</div>
+						<div class="footer-col-3-phones">
+							<p>
+								Telefon: 
+								<a href="tel:<?php echo get_field('phone', 'option'); ?>"><?php echo get_field('phone', 'option'); ?></a>
+							</p>
+						</div>
+						<div class="footer-col-3-workinghours">
+							<p>
+								Radno vreme:
+							</p>
+							<p>
+								<?php echo get_field('working_hours', 'option'); ?>
+							</p>
+						</div>
+					</div>
+					<div class="footer-col-4">
+						<div class="head-pretitle">
+							<span><?php echo get_field('footer_column_3_pretitle', 'option'); ?></span>
+						</div>
+						<img  src="<?php echo get_field('certificate_image', 'option'); ?>" alt="">
+
+					</div>
+			</div>
+			<div class="footer-socials">
 						<div class="socials">
 							<ul>
 								<a href="#" target="_blank">
@@ -132,58 +142,6 @@
 							</ul>
 						</div>
 					</div>
-				</div>
-					<div class="footer-col-2">
-						<div class="head-pretitle">
-							<span>NAVIGACIJA</span>
-						</div>
-						<nav class="footer-col-2-nav">
-							<li>
-								<a href="#">Reciklaža</a>
-							</li>
-							<li>
-								<a href="#">Obnovljivi izvori energije</a>
-							</li>
-							<li>
-								<a href="#">Proizvodi </a>
-							</li>
-							<li>
-								<a href="#">O nama</a>
-							</li>
-							<li>
-								<a href="#">Lokacije</a>
-							</li>
-							<li>
-								<a href="#">Edukacija</a>
-							</li>
-						</nav>
-					</div>
-					<div class="footer-col-3">
-						<div class="head-pretitle">
-							<span>kontaktirajte nas</span>
-						</div>
-						<div class="footer-col-3-phones">
-							<a href="tel:+381646497721">+381 64 6497 721</a>
-							|
-							<a href="tel:+381606596300">+381 60 6596 300</a>
-						</div>
-						<div class="footer-col-3-address">
-							<p>Vihorska 35, 21208 Sremska Kamenica, Srbija</p>
-						</div>
-						<div class="footer-col-3-workinghours">
-							<p>
-								Pon – Pet: 07:00 – 15:00
-							</p>
-						</div>
-					</div>
-					<div class="footer-col-4">
-						<div class="head-pretitle">
-							<span>sertifikati</span>
-						</div>
-						<img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/footer-logos.jpg" alt="">
-
-					</div>
-			</div>
 			<div class="footer-bottom">
 				<div class="footer-bottom-copyrights">
 					<p>

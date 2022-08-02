@@ -1,20 +1,32 @@
 .hero-section {
     background: url('./assets/images/hero-home.jpg');
-    padding-top: 320px;
-    padding-bottom: 150px;
+    height: 100vh;
     border-radius: 0 0 40px 40px;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 
-    @include mq($tablet) {
-        padding-bottom: 100px;
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        padding-top: 100px;
+
+        @include mq($tablet) {
+            padding-top: 50px;
+        }
+        @include mq($phone) {
+            padding-top: 0;
+        }
+
     }
 
     @include mq($phone) {
-        padding-top: 180px;
-        padding-bottom: 40px;
         border-radius: 0 0 20px 20px;
+        background: url('./assets/images/hero-home-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -25,6 +37,7 @@
 
     @include mq($phone) {
         margin-bottom: 25px;
+
     }
 }
 
@@ -38,6 +51,9 @@
 
     @include mq($phone) {
         margin-bottom: 135px;
+    }
+    @include mq($phone-ultra-sm) {
+        margin-bottom: 15vh;
     }
 
     p {
@@ -109,6 +125,9 @@
     right: 10vw;
     bottom: 120px;
 
+    @include mq($lap-small) {
+        right: 20px;
+    }
     @include mq($phone) {
         display: none;
     }

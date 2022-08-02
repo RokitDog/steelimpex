@@ -37,16 +37,19 @@ pre {
 h1 {
 	font-size: unquote('clamp(1.875rem, 1.475rem + 2vw, 3.875rem)');
 	line-height: 1.2;
+	font-weight: 500;
 }
 
 h2 {
 	font-size: unquote('clamp(1.5rem, 1.2rem + 1.5vw, 3rem)');
 	line-height: 1.16;
+	font-weight: 500;
 }
 
 h3 {
 	font-size: unquote('clamp(1.25rem, 1.075rem + 0.8750000000000001vw, 2.125rem)');
 	line-height: 1.176;
+	font-weight: 500;
 }
 
 

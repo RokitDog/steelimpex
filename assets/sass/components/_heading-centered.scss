@@ -1,0 +1,18 @@
+.heading-center-button {
+    max-width: 1281px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 240px 20px 140px;
+
+    @include mq($phone) {
+        padding: 120px 20px 80px;
+    }
+
+    h2 {
+        margin-bottom: 60px;
+
+        @include mq($phone) {
+            margin-bottom: 40px;
+        }
+    }
+}

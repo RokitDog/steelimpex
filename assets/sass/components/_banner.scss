@@ -1,0 +1,28 @@
+.banner-section {
+    height: 100vh;
+    border-radius: 0 0 40px 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .section-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .banner-section-title {
+        color: $white;
+        margin-bottom: 40px;
+    
+        @include mq($phone) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .banner-section-content {
+        color: $white;
+        font-size: unqoute('clamp(1.25rem, 1.075rem + 0.8750000000000001vw, 2.125rem)');
+    }
+}

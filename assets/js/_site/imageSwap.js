@@ -15,9 +15,7 @@ const ImageSwap = {
                 const target = e.target.classList.contains('tabs-container-left-item')
                 if(target){
                     const currentImage = e.target.getAttribute('data-image');
-                    tabImage.style.backgroundImage = `url('./wp-content/themes/steelimpex/assets/images/${currentImage}.jpg')`;
-                    
-                    
+                    tabImage.style.backgroundImage = `url('http://localhost/steelimpex/wp-content/uploads/2022/08/${currentImage}.jpg')`;
                 }
             })
         }

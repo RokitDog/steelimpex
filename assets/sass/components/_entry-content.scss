@@ -4,5 +4,57 @@
         line-height: 1.36;
         color: $grey;
         font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        span {
+            color: $primary;
+            display: inline-block;
+            font-weight: 500;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        strong {
+            font-weight: 500;
+            color: $primary;
+        }
+    }
+
+    li {
+        font-size: unquote('clamp(1.5rem, 1.075rem + 0.625vw, 2.125rem)');
+        color: $grey;
+
+        &::before {
+            margin-right: 20px;
+            color: $blue;
+            font-size: 28px;
+
+            @include mq($phone) {
+                font-size: 24px;
+            }
+        }
+
+
+    }
+
+    ol { 
+        list-style-type: number;
+        margin-left: 20px;
+
+        li {
+            font-size: unquote('clamp(0.875rem, 0.675rem + 0.5vw, 1.375rem)');
+            color: $primary;
+            list-style: inherit;
+            font-weight: 500;
+            
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+
     }
 }

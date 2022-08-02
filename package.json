@@ -27,6 +27,7 @@
     "gulp-uglify-es": "^1.0.4",
     "gulp-util": "^3.0.8",
     "gulp-webpack": "^1.5.0",
+    "leaflet": "^1.8.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "run-sequence": "^2.2.1"
   },

@@ -4,6 +4,55 @@
     width: 100%;
     background: transparent;
     z-index: 999999;
+
+    @include mq($lap-small) {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    transition: background 100ms ease, backdrop-filter 100ms ease;
+
+    .header__container {
+        @include mq($lap-small) {
+            height: 100%;
+        }
+    }
+
+    .section-wrapper {
+        @include mq($lap-small) {
+            height: 100%;
+        }
+    }
+
+    .socials {
+
+        @include mq($lap-small, min) {
+            display: none !important;
+        }
+        
+            ul {
+                grid-gap: 40px;
+                
+                    a {
+                        &:not(:last-child) {
+                            margin-right: 40px;
+
+                            @include mq($phone) {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+            }
+    }
+}
+
+.header.open {
+    .secondary-menu {
+        
+        @include mq($lap-small) {
+            display: flex !important;
+        }
+    }
 }
 
 .header__nav {
@@ -11,14 +60,50 @@
     justify-content: space-between;
     align-items: center;
     height: 130px;
+
+    @include mq($lap-small) {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 92%;
+    }
+
+    .header__logo {
+
+        img {
+
+            @include mq($phone) {
+                width: 65%;
+            }
+        }
+    }
+
     ul {
         display: flex;
         align-items: center;
         grid-gap: 30px;
+
+        @include mq($lap-small, min) {
+            display: flex !important;
+        }
+
+        @include mq($lap-small) {
+            grid-gap: 10px;
+        }
+
+
+
+        @include mq($lap-small) {
+            display: none;
+        }
+
         li {
-            padding-bottom: 10px;
             a {
                 color: $white;
+                transition: color $dur ease;
+
+                &:hover {
+                    color: $blue;
+                }
             }
         }
     }
@@ -27,6 +112,37 @@
         font-size: 18px;
         font-weight: 400;
         letter-spacing: 0.03em;
+        position: relative;
+
+        @include mq($lap-small) {
+            font-size: 36px;
+        }
+        @include mq($phone) {
+            font-size: 24px;
+        }
+        
+        .menu-item-has-children {
+            &:hover {
+                .sub-menu {
+                    max-height: 500px;
+                    padding: 15px 20px;
+                }
+            }
+        }
+
+        .sub-menu {
+            flex-direction: column;
+            align-items: flex-start;
+            grid-gap: 10px;
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(14px);
+            border-radius: 10px;
+            padding: 0 20px;
+            transition: max-height $dur ease, padding $dur ease;
+            max-height: 0;
+            overflow: hidden;
+        }
     }
 
     .secondary-menu {
@@ -41,8 +157,55 @@
             opacity: 0.5;
         }
 
+        @include mq($lap-large) {
+            li:nth-child(1) {
+                display: none;
+            }
+        }
+        @include mq($lap-small) {
+            li:not(:first-child) {
+                display: none;
+            }
+
+            li:first-child {
+                display: initial;
+            }
+
+        }
+
         .language-select {
             opacity: 0.5;
+        }
+    }
+
+    .mobile-menu {
+        display: none;
+        color: $white;
+        font-size: 14px;
+        cursor: pointer;
+        transition: color $dur ease;
+        position: absolute;
+        right: 20px;
+
+        @include mq($tablet, min) {
+            &:hover {
+                color: $blue; 
+    
+                li {
+                    color: $blue;
+                }
+            }
+        }
+
+        li {
+            color: $white;
+            font-size: 8px;
+            margin-left: 5px;
+            transition: color $dur ease;
+        }
+
+        @include mq($lap-small) {
+            display: initial;
         }
     }
 

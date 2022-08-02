@@ -17,6 +17,11 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+
+
 	<?php wp_head(); ?>
 </head>
 
@@ -27,9 +32,6 @@
 	<!-- header -->
 	<header class="header js-header">
 		<div class="section-wrapper">
-			<div class="header-btn">
-				<a href="javascript:;" class="menu-btn js-menu-btn"><span></span></a>
-			</div>
 			<div class="header__container">
 				<nav class="header__nav js-main-nav">
 					<div class="header__logo">
@@ -53,6 +55,23 @@
 							'container'      => false
 						) );
 					?>
+					<div class="mobile-menu">
+						<span>Meni</span>
+						<li class="font-mobile-nav"></li>
+					</div>
+					<div class="socials">
+						<ul>
+							<a href="#" target="_blank">
+								<li class="font-facebook"></li>
+							</a>
+							<a href="#" target="_blank">
+								<li class="font-instagram"></li>
+							</a>
+							<a href="#" target="_blank">
+								<li class="font-linkedin"></li>
+							</a>
+						</ul>
+					</div>
 
 				</nav>
 			</div>

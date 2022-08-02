@@ -18,10 +18,19 @@ get_header(); ?>
 		<main id="main" class="site-main">
 
 			<div class="main-content">
-				<?php
-					get_template_part( 'template-parts/modules/module', 'banner' );
-				?>
 				
+				<?php if ( is_front_page() ) : ?>
+					<?php
+					get_template_part( 'template-parts/modules/module', 'hero' );
+					?>
+					<?php 
+						get_template_part( 'template-parts/modules/module', 'intro' );
+					?>
+				<?php else : ?>
+					<?php get_template_part( 'template-parts/modules/module', 'banner' ); ?>
+				<?php endif; ?>
+				
+					
 				<?php
 				while ( have_posts() ) :
 					the_post();  
@@ -50,6 +59,7 @@ get_header(); ?>
 				<?php
 					get_template_part( 'template-parts/content', 'sections' );
 				?>
+
 			</div>
 
 		</main><!-- #main -->

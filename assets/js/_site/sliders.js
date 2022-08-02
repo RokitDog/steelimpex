@@ -13,29 +13,26 @@ const Sliders = {
 		let slicked = false;
 		
 		const resizeComplete = () => {
+
 			if(slider) {
 				if(window.innerWidth < 767 && !slicked) {
 					slicked = true;
 					// slider
 					 carousel = slider.slick({
-						slidesToShow: 2.1,
+						slidesToShow: 2.2,
 						slidesToScroll: 1,
 						arrows: false,
 						infinite: false,
-						centerPadding: '0px',
 						responsive: [
 							{
 								breakpoint: 650,
 								settings: {
-									slidesToShow: 1.1,
+									slidesToShow: 1.2,
 									slidesToScroll: 1,
-									centerPadding: '0px',
 								}
 							}
-						]
-						
+						]	
 					});
-
 				}  else if(carousel) {
 					slicked = false;
 					slider.slick('unslick');
@@ -43,7 +40,7 @@ const Sliders = {
 			}
 		};
 
-		window.onload = resizeComplete;
+		window.onload = resizeComplete();
 
 		window.addEventListener('resize', () => {
 		  clearTimeout(resizeTimeout);

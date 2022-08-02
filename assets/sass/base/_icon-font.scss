@@ -25,17 +25,23 @@
 	@if $filename == arrow-right {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == check-mark {
 		$char: "\E002";
 	}
-	@if $filename == facebook1 {
+	@if $filename == facebook {
 		$char: "\E003";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook1 {
 		$char: "\E004";
 	}
-	@if $filename == linkedin {
+	@if $filename == instagram {
 		$char: "\E005";
+	}
+	@if $filename == linkedin {
+		$char: "\E006";
+	}
+	@if $filename == mobile-nav {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -55,6 +61,9 @@
 .font-arrow-right {
 	@include font(arrow-right);
 }
+.font-check-mark {
+	@include font(check-mark);
+}
 .font-facebook {
 	@include font(facebook);
 }
@@ -66,5 +75,8 @@
 }
 .font-linkedin {
 	@include font(linkedin);
+}
+.font-mobile-nav {
+	@include font(mobile-nav);
 }
 
