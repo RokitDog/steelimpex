@@ -25,6 +25,8 @@
     }
 
     .socials {
+        right: 20px;
+        bottom: 110px !important;
 
         @include mq($lap-small, min) {
             display: none !important;

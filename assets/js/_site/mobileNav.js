@@ -15,10 +15,11 @@ const MobileNav = {
         const navMenus = document.querySelectorAll('.header__nav ul')
         const secondaryMenu = document.querySelector('.secondary-menu') 
         const headerSocial = document.querySelector('.header .socials')
+        const nav = document.querySelector('.js-main-nav')
 
 
         // Append headerSocial to secondary Menu
-        secondaryMenu.appendChild(headerSocial)
+        nav.appendChild(headerSocial)
         
         navMenuButton.addEventListener('click', () => {
             header.classList.toggle('open');
@@ -28,7 +29,7 @@ const MobileNav = {
                 header.style.background = 'rgba(255, 255, 255, 0.1)';
                 // gsap change header height
                 gsap.to(header, {
-                    duration: 0.5,
+                    duration: 1,
                     height: '100vh',
                     ease: 'power2.out'
                 });
@@ -47,9 +48,13 @@ const MobileNav = {
 
             } else {
                 navMenuButtonText.innerHTML = 'Meni';
+                gsap.to(header, {
+                    duration: 1,
+                    height: 'initial',
+                    ease: 'power2.out'
+                });
                 header.style.background = 'transparent';
                 header.style.backdropFilter = 'blur(0px)';
-                header.style.height = 'initial';
 
                 navMenus.forEach(navMenu => {
                     navMenu.style.display = 'none';
