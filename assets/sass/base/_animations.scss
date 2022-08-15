@@ -19,3 +19,9 @@
         opacity: 1;
     }
 }
+
+.fadeIn-text-hero, .fadeIn-banner {
+    opacity: 0;
+    transform: translateY(100px);
+}
+

@@ -17,6 +17,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
+			<?php if (is_front_page()) { ?>
+				<?php get_template_part('template-parts/modules/module-modal'); ?>
+			<?php } ?>
+
 			<div class="main-content">
 				
 				<?php if ( is_front_page() ) : ?>

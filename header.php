@@ -61,13 +61,13 @@
 					</div>
 					<div class="socials">
 						<ul>
-							<a href="#" target="_blank">
+							<a href="https://www.facebook.com/steelimpex.rs" target="_blank">
 								<li class="font-facebook"></li>
 							</a>
-							<a href="#" target="_blank">
+							<a href="https://www.instagram.com/steelimpexdoo/" target="_blank">
 								<li class="font-instagram"></li>
 							</a>
-							<a href="#" target="_blank">
+							<a href="https://www.linkedin.com/in/steel-impex-6a59a21aa/" target="_blank">
 								<li class="font-linkedin"></li>
 							</a>
 						</ul>

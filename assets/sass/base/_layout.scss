@@ -7,4 +7,12 @@
     max-width: 1720px;
     margin: 0 auto;
     padding: 0 20px;
+
+    @include mq($lap-extra-large) {
+        padding: 0 60px;
+    }
+
+    @include mq($tablet) {
+        padding: 0 20px;
+    }
 }

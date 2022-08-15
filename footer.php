@@ -17,9 +17,12 @@
 			<div class="about-section-numbers">
 				<?php if ( have_rows('about_numbers', 'option') ) : ?>
 					<?php while ( have_rows('about_numbers', 'option') ) : the_row(); ?>
-						<div class="about-section-numbers-item">
-							<div class="about-section-numbers-item-number">
-								<span><?php echo get_sub_field('number'); ?>
+						<div class="about-section-numbers-item fadeIn-numbers">
+							<div class="about-section-numbers-item-number ">
+								<span>
+									<span class="targetNum" data-number=<?php echo get_sub_field('number'); ?>>
+										0
+									</span>
 									<span class="unit"><?php echo get_sub_field('unit'); ?></span>
 								</span>
 
@@ -34,26 +37,26 @@
 				<?php endif; ?>
 			</div>
 			<div class="about-section-banner" style="background-image: url('<?php echo get_field('about_bg_image', 'option'); ?>')">
-				<div class="head-pretitle">
+				<div class="head-pretitle fadeIn-text">
 					<span>
 						<?php echo get_field('about_pretitle', 'option'); ?>
 					</span>
 				</div>
-				<div class="head-title">
+				<div class="head-title fadeIn-text">
 					<h2>
 						<?php echo get_field('about_title', 'option'); ?>
 					</h2>
 				</div>
-				<div class="head-content">
+				<div class="head-content fadeIn-text">
 					<div class="entry-content">
 						<p>
 							<?php echo get_field('about_paragraph', 'option'); ?>
 						</p>
 					</div>
 				</div>
-				<div class="about-section-banner-button primary-button">
+				<div class="about-section-banner-button primary-button fadeIn-text">
 					<a href="<?php echo get_field('about_link', 'option'); ?>">
-						Kontaktiraj nas
+						Kontaktirajte nas
 					</a>
 			</div>
 			</div>
@@ -130,13 +133,13 @@
 			<div class="footer-socials">
 						<div class="socials">
 							<ul>
-								<a href="#" target="_blank">
+								<a href="https://www.facebook.com/steelimpex.rs" target="_blank">
 									<li class="font-facebook"></li>
 								</a>
-								<a href="#" target="_blank">
+								<a href="https://www.instagram.com/steelimpexdoo/" target="_blank">
 									<li class="font-instagram"></li>
 								</a>
-								<a href="#" target="_blank">
+								<a href="https://www.linkedin.com/in/steel-impex-6a59a21aa/" target="_blank">
 									<li class="font-linkedin"></li>
 								</a>
 							</ul>

@@ -4,6 +4,7 @@
 html, body {
 	@include font-smoothing(antialiased);
 	height: 100%;
+  scroll-behavior: smooth;
 }
 
 html {

@@ -1472,9 +1472,9 @@
       }
     },
     "caniuse-lite": {
-      "version": "1.0.30001373",
-      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001373.tgz",
-      "integrity": "sha512-pJYArGHrPp3TUqQzFYRmP/lwJlj8RCbVe3Gd3eJQkAV8SAC6b19XS9BjMvRdvaS8RMkaTN8ZhoHP6S1y8zzwEQ=="
+      "version": "1.0.30001375",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001375.tgz",
+      "integrity": "sha512-kWIMkNzLYxSvnjy0hL8w1NOaWNr2rn39RTAVyIwcw8juu60bZDWiF1/loOYANzjtJmy6qPgNmn38ro5Pygagdw=="
     },
     "caseless": {
       "version": "0.12.0",
@@ -1847,6 +1847,11 @@
         "require-from-string": "^1.1.0"
       }
     },
+    "countup.js": {
+      "version": "2.3.2",
+      "resolved": "https://registry.npmjs.org/countup.js/-/countup.js-2.3.2.tgz",
+      "integrity": "sha512-dQ7F/CmKGjaO6cDfhtEXwsKVlXIpJ89dFs8PvkaZH9jBVJ2Z8GU4iwG/qP7MgY8qwr+1skbwR6qecWWQLUzB8Q=="
+    },
     "create-ecdh": {
       "version": "4.0.4",
       "resolved": "https://registry.npmjs.org/create-ecdh/-/create-ecdh-4.0.4.tgz",
@@ -2217,9 +2222,9 @@
       }
     },
     "electron-to-chromium": {
-      "version": "1.4.206",
-      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.206.tgz",
-      "integrity": "sha512-h+Fadt1gIaQ06JaIiyqPsBjJ08fV5Q7md+V8bUvQW/9OvXfL2LRICTz2EcnnCP7QzrFTS6/27MRV6Bl9Yn97zA=="
+      "version": "1.4.217",
+      "resolved": "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.217.tgz",
+      "integrity": "sha512-iX8GbAMij7cOtJPZo02CClpaPMWjvN5meqXiJXkBgwvraNWTNH0Z7F9tkznI34JRPtWASoPM/xWamq3oNb49GA=="
     },
     "elliptic": {
       "version": "6.5.4",
@@ -2337,9 +2342,9 @@
       }
     },
     "es5-ext": {
-      "version": "0.10.61",
-      "resolved": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.61.tgz",
-      "integrity": "sha512-yFhIqQAzu2Ca2I4SE2Au3rxVfmohU9Y7wqGR+s7+H7krk26NXhIRAZDgqd6xqjCEFUomDEA3/Bo/7fKmIkW1kA==",
+      "version": "0.10.62",
+      "resolved": "https://registry.npmjs.org/es5-ext/-/es5-ext-0.10.62.tgz",
+      "integrity": "sha512-BHLqn0klhEpnOKSrzn/Xsz2UIW8j+cGmo9JLzr8BiUapV8hPL9+FliFqjwr9ngW7jWdnxv6eO+/LqyhJVqgrjA==",
       "requires": {
         "es6-iterator": "^2.0.3",
         "es6-symbol": "^3.1.3",
@@ -2660,9 +2665,9 @@
       },
       "dependencies": {
         "type": {
-          "version": "2.6.0",
-          "resolved": "https://registry.npmjs.org/type/-/type-2.6.0.tgz",
-          "integrity": "sha512-eiDBDOmkih5pMbo9OqsqPRGMljLodLcwd5XD5JbtNB0o89xZAwynY9EdCDsJU7LtcVCClu9DvM7/0Ep1hYX3EQ=="
+          "version": "2.7.2",
+          "resolved": "https://registry.npmjs.org/type/-/type-2.7.2.tgz",
+          "integrity": "sha512-dzlvlNlt6AXU7EBSfpAscydQ7gXB+pPGsPnfJnZpiNJBDj7IaJzQlBZYGdEi4R9HmPdBv2XmWJ6YUtoTa7lmCw=="
         }
       }
     },
@@ -4536,9 +4541,9 @@
       "integrity": "sha512-nsuwtxZfMX67Oryl9LCQ+upnC0Z0BgpwntpS89m1H/TLF0zNfzfLMV/9Wa/6MZsj0acpEjAO0KF1xT6ZdLl95w=="
     },
     "is-core-module": {
-      "version": "2.9.0",
-      "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.9.0.tgz",
-      "integrity": "sha512-+5FPy5PnwmO3lvfMb0AsoPaBG+5KHUI0wYFXOtYPnVVVspTFUuMZNfNaNVRt3FZadstu2c8x23vykRW/NBoU6A==",
+      "version": "2.10.0",
+      "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.10.0.tgz",
+      "integrity": "sha512-Erxj2n/LDAZ7H8WNJXd9tw38GYM3dv8rk8Zcs+jJuxYTW7sozH+SS8NtrSjVL1/vpLvWi1hxy96IzjJ3EHTJJg==",
       "requires": {
         "has": "^1.0.3"
       }
@@ -5932,13 +5937,13 @@
       }
     },
     "object.assign": {
-      "version": "4.1.2",
-      "resolved": "https://registry.npmjs.org/object.assign/-/object.assign-4.1.2.tgz",
-      "integrity": "sha512-ixT2L5THXsApyiUPYKmW+2EHpXXe5Ii3M+f4e+aJFAHao5amFRW6J0OO6c/LU8Be47utCx2GL89hxGB6XSmKuQ==",
+      "version": "4.1.3",
+      "resolved": "https://registry.npmjs.org/object.assign/-/object.assign-4.1.3.tgz",
+      "integrity": "sha512-ZFJnX3zltyjcYJL0RoCJuzb+11zWGyaDbjgxZbdV7rFEcHQuYxrZqhow67aA7xpes6LhojyFDaBKAFfogQrikA==",
       "requires": {
-        "call-bind": "^1.0.0",
-        "define-properties": "^1.1.3",
-        "has-symbols": "^1.0.1",
+        "call-bind": "^1.0.2",
+        "define-properties": "^1.1.4",
+        "has-symbols": "^1.0.3",
         "object-keys": "^1.1.1"
       }
     },

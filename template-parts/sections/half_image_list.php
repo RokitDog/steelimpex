@@ -1,11 +1,11 @@
 <div class="half-image-section 
     <?php if( get_sub_field('reverse') ): ?> <?php echo 'row-reverse'; ?><?php endif; ?>
 ">
-    <div class="half-image-section-image">
+    <div class="half-image-section-image fadeIn-text">
         <img  src="<?php echo get_sub_field('image'); ?>" alt="">
     </div>
     <div class="half-image-section-content">
-        <div class="head-title">
+        <div class="head-title fadeIn-text">
             <h2 class="text-clip-alt">
                 <?php echo get_sub_field('title'); ?>
             </h2>
@@ -15,7 +15,7 @@
                 <ul>
                     <?php if ( have_rows('item') ) : ?>
                         <?php while ( have_rows('item') ) : the_row(); ?>
-                            <li class="font-check-mark">
+                            <li class="font-check-mark fadeIn-cards">
                                 <?php echo get_sub_field('list_item'); ?>
                             </li>
                         <?php endwhile; ?>

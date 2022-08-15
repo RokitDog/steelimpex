@@ -26,6 +26,7 @@ const MobileNav = {
             if(header.classList.contains('open')){
                 navMenuButtonText.innerHTML = 'Nazad';
                 header.style.backdropFilter = 'blur(94px)';
+                header.style['-webkit-backdrop-filter'] = 'blur(94px)';
                 header.style.background = 'rgba(255, 255, 255, 0.1)';
                 // gsap change header height
                 gsap.to(header, {
@@ -48,13 +49,16 @@ const MobileNav = {
 
             } else {
                 navMenuButtonText.innerHTML = 'Meni';
+
                 gsap.to(header, {
                     duration: 1,
                     height: 'initial',
                     ease: 'power2.out'
                 });
+
                 header.style.background = 'transparent';
                 header.style.backdropFilter = 'blur(0px)';
+                header.style['-webkit-backdrop-filter'] = 'blur(0px)';
 
                 navMenus.forEach(navMenu => {
                     navMenu.style.display = 'none';
@@ -63,6 +67,12 @@ const MobileNav = {
                 document.body.style.overflow = 'auto';
             }
         })
+
+        window.addEventListener('resize', () => {
+            // We execute the same script as before
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+          });
 	}
 };
 

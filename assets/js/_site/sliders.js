@@ -7,16 +7,12 @@ const Sliders = {
 		# Initialize
 	-------------------------------------------------------------------------------*/
 	init: function () {
-		let resizeTimeout;
 		var slider = $('.js-slider');
 		let carousel
-		let slicked = false;
 		
-		const resizeComplete = () => {
 
 			if(slider) {
-				if(window.innerWidth < 767 && !slicked) {
-					slicked = true;
+				if(window.innerWidth < 767) {
 					// slider
 					 carousel = slider.slick({
 						slidesToShow: 2.2,
@@ -33,19 +29,9 @@ const Sliders = {
 							}
 						]	
 					});
-				}  else if(carousel) {
-					slicked = false;
-					slider.slick('unslick');
-				}
+				}  
 			}
-		};
 
-		window.onload = resizeComplete();
-
-		window.addEventListener('resize', () => {
-		  clearTimeout(resizeTimeout);
-		  resizeTimeout = setTimeout(resizeComplete, 200);
-		});
 	}
 };
 

@@ -1,86 +1,110 @@
 .cards-section {
-    padding: 100px 0;
+	padding: 100px 0;
 
-    @include mq($phone) {
-        padding: 40px 0;
-    }
+	@include mq($phone) {
+		padding: 40px 0;
+	}
 
-    .section-wrapper {
-        @include mq($phone) {
-            padding: 0;
-        }
+	.section-wrapper {
+		@include mq($phone) {
+			padding: 0;
+		}
 
-        .head-pretitle {
-            @include mq($phone) {
-                padding: 0 20px;
-            }
-        }
-    }
-    
-    .cards-section-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 80px;
-        grid-gap: 15px;
+		.head-pretitle {
+			@include mq($phone) {
+				padding: 0 20px;
+			}
+		}
+	}
 
-        @include mq($phone) {
-            display: grid;
-            margin-bottom: 40px;
-        }
+	.cards-section-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 80px;
+		grid-gap: 15px;
 
-        .cards-section-content-left {
-            max-width: 700px;
+		@include mq($phone) {
+			display: grid;
+			margin-bottom: 40px;
+		}
 
-            @include mq($phone) {
-                padding: 0 20px;
-            }
-        }
+		.cards-section-content-left {
+			max-width: 700px;
 
-        .cards-section-content-right {
-            max-width: 650px;
-            flex-shrink: 1;
+			@include mq($phone) {
+				padding: 0 20px;
+			}
+		}
 
-            @include mq($phone) {
-                padding: 0 20px;
-            }
+		.cards-section-content-right {
+			max-width: 650px;
+			flex-shrink: 1;
 
-        }
-    }
+			@include mq($phone) {
+				padding: 0 20px;
+			}
+		}
+	}
 
-    .cards-section-cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 60px;
+	.cards-section-cards {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 60px;
 
-        @include mq($phone) {
-            grid-template-columns: 1fr;
-            grid-gap: 0;
-        }
+		@include mq($tablet) {
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 30px;
+		}
 
-        .cards-section-cards-item {
-            background-color: $light-grey;
-            padding: 60px 40px;
-            border-radius: 20px;
+		@include mq($phone) {
+			grid-template-columns: 1fr;
+			grid-gap: 0;
+		}
 
-            @include mq($phone) {
-                padding: 30px 20px;
-                margin-left: 20px;
-            }
+		.cards-section-cards-item {
+			background-color: $light-grey;
+			padding: 60px 40px;
+			border-radius: 20px;
 
-            .cards-section-cards-item-title {
-                margin-bottom: 20px;
+			@include mq($phone) {
+				padding: 30px 20px;
+				margin-left: 20px;
+			}
 
-                h3 {
-                    color: $dark-blue;
-                }
-            }
-            
-            .cards-section-cards-item-description {
-                max-width: 384px;
-                margin-bottom: 80px;
-            }
-        }
+			.cards-section-cards-item-title {
+				margin-bottom: 20px;
 
-    }
+				h3 {
+					color: $dark-blue;
+				}
+			}
+
+			.cards-section-cards-item-description {
+				max-width: 384px;
+				margin-bottom: 40px;
+			}
+
+			.cards-section-cards-item-image {
+				text-align: right;
+				width: 100%;
+				position: relative;
+				margin-bottom: 40px;
+
+				img {
+					position: relative;
+					right: -40px;
+					display: inline-block;
+
+					@include mq($phone) {
+						right: -20px;
+					}
+				}
+			}
+
+			.cards-section-cards-item-link {
+				position: relative;
+			}
+		}
+	}
 }

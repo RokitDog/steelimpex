@@ -4,6 +4,10 @@ import TextSwap from './_site/textSwap';
 import ImageSwap from './_site/imageSwap';
 import MobileNav from './_site/mobileNav';
 import Map from './_site/map';
+import modal from "./_site/modal";
+import Gsap from './_site/gsap';
+import Counter from './_site/counter';
+
 
 jQuery(function () {
 	// Slick Slider
@@ -23,6 +27,17 @@ jQuery(function () {
 
 	// Map
 	Map.init();
+
+	// Modal
+	if (document.querySelector(".modal")) {
+		modal.init();
+	}
+
+	// GSAP
+	Gsap.init();
+
+	// CountUp
+	Counter.init();
 
 	console.log('hello');
 });

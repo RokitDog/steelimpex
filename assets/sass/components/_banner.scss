@@ -1,5 +1,5 @@
 .banner-section {
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     border-radius: 0 0 40px 40px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,4 +25,56 @@
         color: $white;
         font-size: unqoute('clamp(1.25rem, 1.075rem + 0.8750000000000001vw, 2.125rem)');
     }
+}
+
+.modal {
+	position: fixed;
+	z-index: 9999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #000;
+	width: 100%;
+	height: calc(var(--vh, 1vh) * 100);
+    padding: 0;
+
+	> div {
+		flex: 1 1 auto;
+		position: relative;
+		max-width: calc(177.778vh);
+		height: calc(40vw);
+		@include mq($tablet-l) {
+			max-width: calc(95vw);
+			height: calc(45vw);
+		}
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	img {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+		width: 50px;
+		height: 50px;
+        z-index: 99999999999999999999999999;
+		cursor: pointer;
+		@include mq($phone) {
+			width: 30px;
+			height: 30px;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+
+.hidden {
+	display: none;
 }
